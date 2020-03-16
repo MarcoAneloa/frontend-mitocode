@@ -1,6 +1,9 @@
 import { BuscarDialogoComponent } from './buscar-dialogo/buscar-dialogo.component';
 import { Consulta } from './../../_model/consulta';
-import { MatTableDataSource, MatPaginator, MatSort, MatDialog } from '@angular/material';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatDialog } from '@angular/material/dialog';
 import { FiltroConsultaDTO } from './../../_dto/filtroConsultaDTO';
 import { ConsultaService } from './../../_service/consulta.service';
 import { FormGroup, FormControl } from '@angular/forms';

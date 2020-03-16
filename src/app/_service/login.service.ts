@@ -9,6 +9,7 @@ import { Injectable } from '@angular/core';
 export class LoginService {
 
   url: string = `${environment.HOST}/oauth/token`
+  //url: string = `${environment.HOST}/${environment.MICRO_AUTH}/oauth/token`
 
   constructor(
     private http: HttpClient,

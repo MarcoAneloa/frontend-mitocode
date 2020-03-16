@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 import { environment } from './../../environments/environment';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Injectable } from '@angular/core';
 import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor, HttpResponse } from '@angular/common/http';
 import { Observable, EMPTY } from 'rxjs';

@@ -1,6 +1,6 @@
 import { ConsultaService } from './../../../_service/consulta.service';
 import { ConsultaListaExamenDTO } from './../../../_dto/consultaListaExamenDTO';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Consulta } from './../../../_model/consulta';
 import { Component, OnInit, Inject } from '@angular/core';
 

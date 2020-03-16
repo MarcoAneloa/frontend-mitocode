@@ -1,7 +1,7 @@
 import { MedicoService } from './../../../_service/medico.service';
 import { Medico } from './../../../_model/medico';
 import { Component, OnInit, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { switchMap } from 'rxjs/operators';
 
 @Component({

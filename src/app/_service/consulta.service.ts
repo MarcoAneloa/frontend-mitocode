@@ -12,6 +12,7 @@ import { Injectable } from '@angular/core';
 export class ConsultaService {
 
   url: string = `${environment.HOST}/consultas`;
+  //url: string = `${environment.HOST}/${environment.MICRO_CR}/consultas`;
 
   constructor(private http: HttpClient) { }
 

@@ -75,8 +75,8 @@ export function tokenGetter() {
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
-        whitelistedDomains: ['TU_IP_PUBLICA'],
-        blacklistedRoutes: ['http://TU_IP_PUBLICA/mediapp-backend/login/enviarCorreo']
+        whitelistedDomains: ['localhost:8080'],
+        blacklistedRoutes: ['http://localhost:8080/login/enviarCorreo']
       }
     })
   ],

@@ -1,6 +1,9 @@
 import { switchMap } from 'rxjs/operators';
 import { ExamenService } from './../../_service/examen.service';
-import { MatTableDataSource, MatPaginator, MatSort, MatSnackBar } from '@angular/material';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Examen } from './../../_model/examen';
 import { Component, OnInit, ViewChild } from '@angular/core';
 

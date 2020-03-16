@@ -13,6 +13,7 @@ export class ExamenService {
   mensajeCambio = new Subject<string>();
 
   url: string = `${environment.HOST}/examenes`;
+  //url: string = `${environment.HOST}/${environment.MICRO_CRUD}/examenes`;
 
   constructor(private http: HttpClient) { }
 

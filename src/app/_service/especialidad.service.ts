@@ -13,6 +13,7 @@ export class EspecialidadService {
   mensajeCambio = new Subject<string>();
 
   url: string = `${environment.HOST}/especialidades`;
+  //url: string = `${environment.HOST}/${environment.MICRO_CRUD}/especialidades`;
 
   constructor(private http: HttpClient) { }
 

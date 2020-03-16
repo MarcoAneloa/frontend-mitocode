@@ -1,6 +1,6 @@
 import { ConsultaListaExamenDTO } from './../../_dto/consultaListaExamenDTO';
 import { Consulta } from './../../_model/consulta';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ConsultaService } from './../../_service/consulta.service';
 import { ExamenService } from './../../_service/examen.service';
 import { MedicoService } from './../../_service/medico.service';

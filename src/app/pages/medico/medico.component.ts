@@ -1,6 +1,10 @@
 import { MedicoDialogoComponent } from './medico-dialogo/medico-dialogo.component';
 import { MedicoService } from './../../_service/medico.service';
-import { MatTableDataSource, MatPaginator, MatSort, MatSnackBar, MatDialog } from '@angular/material';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDialog } from '@angular/material/dialog';
 import { Medico } from './../../_model/medico';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { switchMap } from 'rxjs/operators';
