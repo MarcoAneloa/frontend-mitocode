@@ -69,8 +69,8 @@ export class EspecialidadComponent implements OnInit {
     this.dataSource.filter = valor.trim().toLowerCase();
   }
 
-  eliminar(especialidad: Especialidad) {
-    this.especialidadService.eliminar(especialidad.idEspecialidad).pipe(switchMap(() => {
+  eliminar(idEspecialidad: number) {
+    this.especialidadService.eliminar(idEspecialidad).pipe(switchMap(() => {
       return this.especialidadService.listar();
     })).subscribe(data => {
       this.especialidadService.especialidadCambio.next(data);

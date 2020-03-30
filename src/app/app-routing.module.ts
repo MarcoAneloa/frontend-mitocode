@@ -18,6 +18,10 @@ import { MedicoComponent } from './pages/medico/medico.component';
 import { PacienteComponent } from './pages/paciente/paciente.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { MenuComponent } from './pages/menu/menu.component';
+import { MenuEdicionComponent } from './pages/menu/menu-edicion/menu-edicion.component';
+import { RolComponent } from './pages/rol/rol.component';
+import { RolEdicionComponent } from './pages/rol/rol-edicion/rol-edicion.component';
 
 
 const routes: Routes = [
@@ -31,6 +35,18 @@ const routes: Routes = [
     path: 'especialidad', component: EspecialidadComponent, children: [
       { path: 'nuevo', component: EspecialidadEdicionComponent },
       { path: 'edicion/:id', component: EspecialidadEdicionComponent }
+    ], canActivate: [GuardService]
+  },
+  {
+    path: 'menu', component: MenuComponent, children: [
+      { path: 'nuevo', component: MenuEdicionComponent },
+      { path: 'edicion/:id', component: MenuEdicionComponent }
+    ], canActivate: [GuardService]
+  },
+  {
+    path: 'rol', component: RolComponent, children: [
+      { path: 'nuevo', component: RolEdicionComponent },
+      { path: 'edicion/:id', component: RolEdicionComponent }
     ], canActivate: [GuardService]
   },
   {
