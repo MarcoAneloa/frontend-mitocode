@@ -22,6 +22,8 @@ import { MenuComponent } from './pages/menu/menu.component';
 import { MenuEdicionComponent } from './pages/menu/menu-edicion/menu-edicion.component';
 import { RolComponent } from './pages/rol/rol.component';
 import { RolEdicionComponent } from './pages/rol/rol-edicion/rol-edicion.component';
+import { MenuRolComponent } from './pages/menu-rol/menu-rol.component';
+import { MenuRolAsignacionComponent } from './pages/menu-rol/menu-rol-asignacion/menu-rol-asignacion.component';
 
 
 const routes: Routes = [
@@ -41,6 +43,11 @@ const routes: Routes = [
     path: 'menu', component: MenuComponent, children: [
       { path: 'nuevo', component: MenuEdicionComponent },
       { path: 'edicion/:id', component: MenuEdicionComponent }
+    ], canActivate: [GuardService]
+  },
+  {
+    path: 'menurol', component: MenuRolComponent, children: [
+      { path: 'asignar/:id', component: MenuRolAsignacionComponent }
     ], canActivate: [GuardService]
   },
   {

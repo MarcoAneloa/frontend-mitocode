@@ -3,6 +3,7 @@ import { environment } from './../../environments/environment';
 import { Subject } from 'rxjs';
 import { Menu } from './../_model/menu';
 import { Injectable } from '@angular/core';
+import { MenuRolDTO } from '../_dto/menuRolDTO';
 
 @Injectable({
   providedIn: 'root'
@@ -37,6 +38,10 @@ export class MenuService {
 
   registrar(menu: Menu) {
     return this.http.post(this.url, menu);
+  }
+
+  registrarMenuRol(menuRoles: MenuRolDTO[]) {
+    return this.http.post(`${this.url}/roles`, menuRoles);
   }
 
   modificar(menu: Menu) {

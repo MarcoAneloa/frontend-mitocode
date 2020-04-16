@@ -24,6 +24,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [],
@@ -51,7 +52,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatStepperModule,
     MatSlideToggleModule,
     MatGridListModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatListModule
   ],
   exports: [
     MatSidenavModule,
@@ -76,10 +78,11 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatStepperModule,
     MatSlideToggleModule,
     MatGridListModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatListModule
   ],
   providers: [
-    { provide: MatPaginatorIntl, useClass: MatPaginatorImpl},
+    { provide: MatPaginatorIntl, useClass: MatPaginatorImpl },
     { provide: MAT_DATE_LOCALE, useValue: 'es-ES' },
   ]
 })
