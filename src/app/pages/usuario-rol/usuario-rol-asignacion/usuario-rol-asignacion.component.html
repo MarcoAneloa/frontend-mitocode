@@ -1,0 +1,50 @@
+<form class="example-container">
+    <mat-grid-list cols="2" rowHeight="12:2">
+        <mat-grid-tile>
+            <h1>Usuario Seleccionado: </h1>
+            {{username}}
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <h1>Roles Disponibles:</h1><br>
+            <mat-select placeholder="Rol" [(value)]="rolSeleccionado">
+                <mat-option *ngFor="let ex of roles" [value]="ex">
+                    {{ ex.nombre }}
+                </mat-option>
+            </mat-select>
+
+            <button mat-raised-button color="primary" type="button" (click)="agregarRol()">
+                <mat-icon>add</mat-icon>
+            </button>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <h1>Roles Actuales:</h1><br>
+            <mat-list role="list">
+                <mat-list-item role="listitem" *ngFor="let rol of rolesAsignados; let i=index">{{rol.nombre}}
+                </mat-list-item>
+            </mat-list>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <h1>Roles Seleccionados:</h1><br>
+            <mat-list role="list">
+                <mat-list-item role="listitem" *ngFor="let d of rolesSeleccionados; let i=index">
+                    {{d.nombre}}
+                    <span class="example-spacer"></span>
+                    <button mat-raised-button color="warn" type="button" (click)="removerRol(i)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </mat-list-item>
+            </mat-list>
+        </mat-grid-tile>
+        <mat-grid-tile> <button mat-raised-button color="primary" (click)="operar()">
+                <mat-icon>done</mat-icon>
+                <span>Aceptar</span>
+            </button></mat-grid-tile>
+        <mat-grid-tile>
+            <button mat-raised-button color="accent" routerLink='/usuariorol' type="button">
+                <mat-icon>close</mat-icon>
+                <span>Cancelar</span>
+            </button></mat-grid-tile>
+    </mat-grid-list>
+</form>
+
+<br />

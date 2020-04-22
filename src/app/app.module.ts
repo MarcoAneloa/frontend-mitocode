@@ -34,10 +34,12 @@ import { TokenComponent } from './pages/login/recuperar/token/token.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { MenuComponent } from './pages/menu/menu.component';
 import { MenuEdicionComponent } from './pages/menu/menu-edicion/menu-edicion.component';
+import { UsuarioRolComponent } from "./pages/usuario-rol/usuario-rol.component";
 import { RolComponent } from './pages/rol/rol.component';
 import { RolEdicionComponent } from './pages/rol/rol-edicion/rol-edicion.component';
 import { MenuRolComponent } from './pages/menu-rol/menu-rol.component';
 import { MenuRolAsignacionComponent } from './pages/menu-rol/menu-rol-asignacion/menu-rol-asignacion.component';
+import { UsuarioRolAsignacionComponent } from "./pages/usuario-rol/usuario-rol-asignacion/usuario-rol-asignacion.component";
 
 export function tokenGetter() {
   let tk = sessionStorage.getItem(environment.TOKEN_NAME);
@@ -71,7 +73,9 @@ export function tokenGetter() {
     RolComponent,
     RolEdicionComponent,
     MenuRolComponent,
-    MenuRolAsignacionComponent
+    MenuRolAsignacionComponent,
+    UsuarioRolComponent,
+    UsuarioRolAsignacionComponent
   ],
   entryComponents: [MedicoDialogoComponent, BuscarDialogoComponent],
   imports: [
